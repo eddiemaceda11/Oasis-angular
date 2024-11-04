@@ -1,7 +1,16 @@
-<div>
-  <h2></h2>
-  <div></div>
-  <div>
-    <!-- Sidebar tasks mapped here -->
+<div class="sidebar">
+  <div class="sidebar-wrapper">
+    <div class="sidebar-header">
+      <h2>Oasis</h2>
+    </div>
+    <div></div>
+    <div>
+      <!-- Sidebar tasks mapped here -->
+      <ul>
+        @for (item of sidebarData; track $index) {
+        <li>{{ item.title }}</li>
+        }
+      </ul>
+    </div>
   </div>
 </div>
