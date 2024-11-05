@@ -5,10 +5,18 @@
     </div>
     <div></div>
     <div>
-      <!-- Sidebar tasks mapped here -->
       <ul>
+        <!-- Sidebar tasks mapped here -->
         @for (item of sidebarData; track $index) {
-        <li>{{ item.title }}</li>
+        <li class="sidebar-selection-container">
+          <p>{{ item.title }}</p>
+          @for (selection of item.selections; track $index) {
+          <div>
+            <i [class]="selection.image"></i>
+            <span>{{ selection.selection }}</span>
+          </div>
+          }
+        </li>
         }
       </ul>
     </div>
