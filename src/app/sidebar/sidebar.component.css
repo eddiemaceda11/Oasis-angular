@@ -1,24 +1,59 @@
 .sidebar {
   width: 250px;
   height: 100vh;
-  border-right: 1px solid #000;
+  border-right: 1px solid rgba(212, 212, 212, 0.633);
 }
 
 .sidebar-wrapper {
+  height: 100%;
   padding-left: 1.3rem;
   padding-right: 1.3rem;
 }
 
 .sidebar-header {
-  height: 3.6rem;
+  height: 4rem;
   display: flex;
   align-items: center;
-  margin-top: 1rem;
+  border-bottom: 2px solid rgba(212, 212, 212, 0.633);
 }
 
 .sidebar-header h2 {
   font-size: 1.5rem;
-  border-bottom: 2px solid rgba(212, 212, 212, 0.633);
   width: 99%;
-  padding-bottom: 15px;
+}
+
+.sidebar-selection-container {
+  height: auto;
+  margin-top: 8px;
+}
+
+.sidebar-selection-container p {
+  margin-bottom: 4px;
+  cursor: default;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.sidebar-selection-container div {
+  display: flex;
+  align-items: center;
+  height: 2.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.sidebar-selection-container div:hover {
+  background-color: #bbdefb;
+}
+
+.sidebar-selection-container i {
+  font-size: 15px;
+  padding-left: 1rem;
+  padding-bottom: 1.5px;
+  width: 2.2rem;
+}
+
+.sidebar-selection-container span {
+  font-size: 13px;
+  margin-left: 1rem;
 }
