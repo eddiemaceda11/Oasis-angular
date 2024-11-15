@@ -1,0 +1,32 @@
+:host {
+  width: 100%;
+}
+
+.main {
+  background-color: rgb(243 243 243);
+  height: 100%;
+  
+}
+
+.main-header {
+  padding: 1rem 2rem;
+  height: 9rem;
+}
+
+.main-header h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.main-header p {
+  font-size: 0.75rem;
+  color: rgb(107, 114, 128);
+  line-height: 1.6;
+  width: 52rem;
+}
+
+.main-body {
+  height: calc(100% - 9rem);
+  padding: 1rem 2rem;
+}
