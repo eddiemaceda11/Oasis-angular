@@ -1,15 +1,82 @@
 <div class="quick-actions-container">
   <div class="quick-actions-header">Quick Actions</div>
-  <p>What would you like to do next?</p>
-  <div class="quick-actions-buttons-container">
+  <p class="client-action" *ngIf="!readyToPost && !updateTask">
+    What would you like to do next?
+  </p>
+  <p class="client-action" *ngIf="readyToPost">Add your message</p>
+  <p class="client-action" *ngIf="updateTask">Choose a task status</p>
+  <!-- Display this div as the default-->
+  <div
+    class="quick-actions-buttons-container"
+    *ngIf="!readyToPost && !updateTask"
+  >
     <div class="quick-actions-button-wrapper">
-      <button>Post an Update</button>
+      <button (click)="toggleReadyToPost()">Post an Update</button>
     </div>
     <div class="quick-actions-button-wrapper">
-      <button>Update Task</button>
+      <button (click)="toggleUpdateTask()">Update Task</button>
     </div>
     <div class="quick-actions-button-wrapper">
       <button>Complete Task</button>
     </div>
+  </div>
+  <!-- Display this div if the user selects the Post an Update button -->
+  <div class="quick-actions-buttons-container" *ngIf="readyToPost">
+    <textarea class="textbox" #textInputValue></textarea>
+    <button (click)="addUpdateMessage(textInputValue.value)">Post</button>
+  </div>
+  <!-- Display this div if the user selects the Update Task button -->
+  <div class="quick-actions-buttons-container" *ngIf="updateTask">
+    <div class="flex-row update-task-view">
+      <div class="quick-actions-button-wrapper">
+        <button>In progress</button>
+      </div>
+      <div class="quick-actions-button-wrapper">
+        <button>Complete</button>
+      </div>
+    </div>
+    <div class="priority-section">
+      <p class="priority-heading">Priority</p>
+      <div class="priority-radio-group flex-row">
+        <div>
+          <input
+            type="radio"
+            id="low"
+            name="priority"
+            value="low"
+            [(ngModel)]="selectedValue"
+          />
+          <label for="low" class="label-low">Low</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="medium"
+            name="priority"
+            value="medium"
+            [(ngModel)]="selectedValue"
+          />
+          <label for="medium" class="label-medium">Medium</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="high"
+            name="priority"
+            value="high"
+            [(ngModel)]="selectedValue"
+          />
+          <label for="high" class="label-high">High</label>
+        </div>
+      </div>
+      <p>{{ selectedValue }}</p>
+    </div>
+  </div>
+  <div
+    [ngClass]="
+      readyToPost === false && updateTask === false ? 'hidden' : 'cancel-action'
+    "
+  >
+    <button (click)="closeAction()">x</button>
   </div>
 </div>

@@ -1,12 +1,12 @@
 .quick-actions-container {
   border-radius: 8px;
   height: 8.8rem;
-  width: 45rem;
+  width: 40rem;
   background-color: #f8f8f8;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(181, 181, 181, 0.75);
 -moz-box-shadow: 0px 0px 5px 1px rgba(181, 181, 181, 0.75);
 box-shadow: 0px 0px 5px 1px rgba(181, 181, 181, 0.75);
-
+position: relative;
 }
 
 .quick-actions-header {
@@ -17,7 +17,7 @@ box-shadow: 0px 0px 5px 1px rgba(181, 181, 181, 0.75);
   border-top-left-radius: 8px;
 }
 
-.quick-actions-container p {
+.quick-actions-container .client-action {
   margin: 1rem 0rem .8rem 1.25rem;
 }
 
@@ -52,3 +52,64 @@ box-shadow: 0px 0px 5px 1px rgba(181, 181, 181, 0.75);
   padding: .55rem 1.65rem;
 }
 
+.update-task-view {
+  width: 17rem;
+}
+
+.priority-section {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.priority-heading {
+  position: absolute;
+  top: -70%;
+}
+
+.priority-radio-group {
+  gap: 1rem;
+}
+
+.label-low {
+  color: rgb(59 209 246);
+}
+
+.label-medium {
+  color: rgb(253 186 116);
+}
+
+.label-high {
+  color: rgb(239 68 68);
+}
+
+.label-low, .label-high, .label-medium {
+  margin-left: 4px;
+}
+
+.cancel-action {
+  top: 30%;
+  right: 2%;
+  position: absolute;
+  background-color: #e9e9e9;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cancel-action button {
+  color: #808080;
+  border: 2px solid #999999;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

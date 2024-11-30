@@ -1,0 +1,16 @@
+<div class="activity-feed-container">
+  <header class="activity-feed-header">Activity Feed</header>
+  <div class="activity-feed-messages">
+    <div class="activity-feed-message" *ngFor="let message of feedMessages">
+      <div class="activity-columns">
+        <div class="activity-message-image"><img src="" alt="" /></div>
+        <p class="message-name">{{ message.name }} updated this task</p>
+        <p class="activity-message-date">{{ message.date }}</p>
+      </div>
+      <div class="subsection">
+        <p class="message-text">"{{ message.text }}"</p>
+        <p class="activity-message-time">{{ message.time }}</p>
+      </div>
+    </div>
+  </div>
+</div>

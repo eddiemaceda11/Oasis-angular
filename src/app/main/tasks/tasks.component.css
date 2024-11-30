@@ -1,0 +1,11 @@
+.tasks-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-widgets-container {
+  border: 1px solid red;
+  display: flex;
+  height: 10rem;
+}

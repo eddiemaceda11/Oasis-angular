@@ -1,0 +1,67 @@
+.activity-feed-container {
+  border-radius: 8px;
+  height: 30rem;
+  width: 29rem;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(181, 181, 181, 0.75);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(181, 181, 181, 0.75);
+  box-shadow: 0px 0px 5px 1px rgba(181, 181, 181, 0.75);
+}
+
+.activity-feed-header {
+  background-color: rgba(227, 235, 238, 0.798);
+  padding: .5rem 1rem ;
+  font-weight: 500;
+}
+
+.activity-feed-messages {
+  height: calc(100% - 35px);
+  overflow: scroll;
+  padding: 1rem;
+}
+
+.activity-feed-message {
+  position: relative;
+  min-height: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+.activity-columns {
+  display: flex;
+}
+
+.activity-message-image {
+  background-color: rgb(225, 225, 235);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.message-name {
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 3rem;
+}
+
+.subsection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-text {
+  font-size: 12px;
+  margin-left: 3rem;
+  margin-top: 2px;
+  width: 18rem;
+  word-wrap: break-word;
+}
+
+.activity-message-date {
+  font-size: 12px;
+  margin-left: auto;
+}
+
+.activity-message-time {
+  font-size: 12px;
+}
